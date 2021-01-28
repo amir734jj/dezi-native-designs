@@ -78,13 +78,15 @@ export default function Home() {
             </div>
           </div>
 
+          <hr />
+
           <div className="row">
             <div className="col-lg-4 col-md-6 col-sm-12">
               {first.map((i) => (
                 <img
                   key={i}
                   src={`image${i}.jpg`}
-                  className="img-thumbnail margin-sm black-and-white"
+                  className="img-thumbnail margin-sm product-image"
                   alt=""
                 />
               ))}
@@ -95,7 +97,7 @@ export default function Home() {
                 <img
                   key={i}
                   src={`image${i}.jpg`}
-                  className="img-thumbnail margin-sm black-and-white"
+                  className="img-thumbnail margin-sm product-image"
                   alt=""
                 />
               ))}
@@ -106,7 +108,7 @@ export default function Home() {
                 <img
                   key={i}
                   src={`image${i}.jpg`}
-                  className="img-thumbnail margin-sm black-and-white"
+                  className="img-thumbnail margin-sm product-image"
                   alt=""
                 />
               ))}

@@ -1,6 +1,8 @@
-.black-and-white {
-  filter: gray;
-  filter: grayscale(50%);
+.product-image {
+}
+
+.product-image:hover {
+  transform: scale(1.01);
 }
 
 .header {

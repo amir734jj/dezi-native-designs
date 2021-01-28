@@ -2,6 +2,20 @@ import Head from "next/head";
 import "../styles/Home.module.css";
 
 export default function Home() {
+  const count = 9;
+  const chuckSize = 2;
+  const images = [...Array(count).keys()].map((x) => x + 1);
+
+  let m, n;
+  let first, second, third;
+
+  m = Math.ceil(count / 3);
+  n = Math.ceil((2 * count) / 3);
+
+  first = images.slice(0, m);
+  second = images.slice(m, n);
+  third = images.slice(n, count);
+
   return (
     <div>
       <Head>
@@ -56,7 +70,7 @@ export default function Home() {
               </a>
 
               <a
-                href="mailto:desi@gmail.com"
+                href="mailto:Dschocko@hotmail.com"
                 className="btn btn-default btn-xlg margin-right-sm"
               >
                 <i class="fa fa-envelope-o" aria-hidden="true"></i>
@@ -65,46 +79,37 @@ export default function Home() {
           </div>
 
           <div className="row">
-            <div className="col-lg-4 col-md-12 col-sm-12">
-              <img
-                src="image1.jpg"
-                className="img-thumbnail margin-sm black-and-white"
-                alt=""
-              />
-
-              <img
-                src="image1.jpg"
-                className="img-thumbnail margin-sm black-and-white"
-                alt=""
-              />
+            <div className="col-lg-4 col-md-6 col-sm-12">
+              {first.map((i) => (
+                <img
+                  key={i}
+                  src={`image${i}.jpg`}
+                  className="img-thumbnail margin-sm black-and-white"
+                  alt=""
+                />
+              ))}
             </div>
 
             <div className="col-lg-4 col-md-6 col-sm-12">
-              <img
-                src="image1.jpg"
-                className="img-thumbnail margin-sm black-and-white"
-                alt=""
-              />
-
-              <img
-                src="image1.jpg"
-                className="img-thumbnail margin-sm black-and-white"
-                alt=""
-              />
+              {second.map((i) => (
+                <img
+                  key={i}
+                  src={`image${i}.jpg`}
+                  className="img-thumbnail margin-sm black-and-white"
+                  alt=""
+                />
+              ))}
             </div>
 
             <div className="col-lg-4 col-md-6 col-sm-12">
-              <img
-                src="image1.jpg"
-                className="img-thumbnail margin-sm black-and-white"
-                alt=""
-              />
-
-              <img
-                src="image1.jpg"
-                className="img-thumbnail margin-sm black-and-white"
-                alt=""
-              />
+              {third.map((i) => (
+                <img
+                  key={i}
+                  src={`image${i}.jpg`}
+                  className="img-thumbnail margin-sm black-and-white"
+                  alt=""
+                />
+              ))}
             </div>
           </div>
         </div>

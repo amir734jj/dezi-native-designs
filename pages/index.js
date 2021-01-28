@@ -1,65 +1,114 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import "../styles/Home.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
-        <title>Create Next App</title>
+        <title>Dezi Native Designs</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+          rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+          rel="stylesheet"
+        ></link>
+        <link
+          href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          rel="stylesheet"
+        />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
+      <main>
+        <div className="container">
+          <div
+            className="container margin-top-l"
+            style={{ textAlign: "center" }}
           >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+            <h3 className="header">
+              <strong>MY WORK</strong>
+            </h3>
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+            <h5 className="sub-header">Native American Arts and Crafts</h5>
+            <p>Desiree Schocko / Jan. 2021</p>
+
+            <div className="container-fluid">
+              <a
+                target="_blank"
+                href="https://www.etsy.com/shop/DeziNativeDesigns?ref=seller-platform-mcnav"
+                className="btn btn-default btn-xlg margin-right-sm"
+              >
+                <i class="fa fa-etsy" aria-hidden="true" />
+              </a>
+
+              <a
+                target="_blank"
+                href="https://www.instagram.com/desiodawa/"
+                className="btn btn-default btn-xlg margin-right-sm"
+              >
+                <i class="fa fa-instagram" aria-hidden="true" />
+              </a>
+
+              <a
+                href="mailto:desi@gmail.com"
+                className="btn btn-default btn-xlg margin-right-sm"
+              >
+                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="col-lg-4 col-md-12 col-sm-12">
+              <img
+                src="image1.jpg"
+                className="img-thumbnail margin-sm black-and-white"
+                alt=""
+              />
+
+              <img
+                src="image1.jpg"
+                className="img-thumbnail margin-sm black-and-white"
+                alt=""
+              />
+            </div>
+
+            <div className="col-lg-4 col-md-6 col-sm-12">
+              <img
+                src="image1.jpg"
+                className="img-thumbnail margin-sm black-and-white"
+                alt=""
+              />
+
+              <img
+                src="image1.jpg"
+                className="img-thumbnail margin-sm black-and-white"
+                alt=""
+              />
+            </div>
+
+            <div className="col-lg-4 col-md-6 col-sm-12">
+              <img
+                src="image1.jpg"
+                className="img-thumbnail margin-sm black-and-white"
+                alt=""
+              />
+
+              <img
+                src="image1.jpg"
+                className="img-thumbnail margin-sm black-and-white"
+                alt=""
+              />
+            </div>
+          </div>
         </div>
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
     </div>
-  )
+  );
 }

@@ -1,4 +1,6 @@
 .product-image {
+  overflow: hidden;
+  object-fit: cover;
 }
 
 .product-image:hover {

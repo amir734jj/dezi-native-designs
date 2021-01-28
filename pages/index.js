@@ -1,9 +1,19 @@
 import Head from "next/head";
 import "../styles/Home.module.css";
 
+const sectionRender = (arr) =>
+  arr.map((i) => (
+    <div className="margin-sm" key={i}>
+      <img
+        src={`image${i}.jpg`}
+        className="img-thumbnail  product-image"
+        alt=""
+      />
+    </div>
+  ));
+
 export default function Home() {
   const count = 9;
-  const chuckSize = 2;
   const images = [...Array(count).keys()].map((x) => x + 1);
 
   let m, n;
@@ -82,36 +92,15 @@ export default function Home() {
 
           <div className="row">
             <div className="col-lg-4 col-md-6 col-sm-12">
-              {first.map((i) => (
-                <img
-                  key={i}
-                  src={`image${i}.jpg`}
-                  className="img-thumbnail margin-sm product-image"
-                  alt=""
-                />
-              ))}
+              {sectionRender(first)}
             </div>
 
             <div className="col-lg-4 col-md-6 col-sm-12">
-              {second.map((i) => (
-                <img
-                  key={i}
-                  src={`image${i}.jpg`}
-                  className="img-thumbnail margin-sm product-image"
-                  alt=""
-                />
-              ))}
+              {sectionRender(second)}
             </div>
 
             <div className="col-lg-4 col-md-6 col-sm-12">
-              {third.map((i) => (
-                <img
-                  key={i}
-                  src={`image${i}.jpg`}
-                  className="img-thumbnail margin-sm product-image"
-                  alt=""
-                />
-              ))}
+              {sectionRender(third)}
             </div>
           </div>
         </div>

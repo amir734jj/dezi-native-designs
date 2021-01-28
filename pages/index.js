@@ -56,7 +56,7 @@ export default function Home() {
               <a
                 target="_blank"
                 href="https://www.etsy.com/shop/DeziNativeDesigns?ref=seller-platform-mcnav"
-                className="btn btn-default btn-xlg margin-right-sm"
+                className="btn btn-default btn-xlg margin-sm"
               >
                 <i class="fa fa-etsy" aria-hidden="true" />
               </a>
@@ -64,14 +64,14 @@ export default function Home() {
               <a
                 target="_blank"
                 href="https://www.instagram.com/desiodawa/"
-                className="btn btn-default btn-xlg margin-right-sm"
+                className="btn btn-default btn-xlg margin-sm"
               >
                 <i class="fa fa-instagram" aria-hidden="true" />
               </a>
 
               <a
                 href="mailto:Dschocko@hotmail.com"
-                className="btn btn-default btn-xlg margin-right-sm"
+                className="btn btn-default btn-xlg margin-sm"
               >
                 <i class="fa fa-envelope-o" aria-hidden="true"></i>
               </a>

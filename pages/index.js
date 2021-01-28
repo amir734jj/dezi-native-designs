@@ -1,46 +1,48 @@
 import Head from "next/head";
 import "../styles/Home.module.css";
+import images from "./images.json";
 
 const sectionRender = (arr) =>
-  arr.map((i) => (
+  arr.map(({ src, text }, i) => (
     <div className="margin-sm" key={i}>
-      <img
-        src={`image${i}.jpg`}
-        className="img-thumbnail  product-image"
-        alt=""
-      />
+      <div className="thumbnail text-center">
+        <img
+          title={text || "craft"}
+          src={src}
+          alt={`image-${i}`}
+          className="img-responsive product-image"
+        />
+        {text ? (
+          <div className="caption">
+            <p>{text}</p>
+          </div>
+        ) : null}
+      </div>
     </div>
   ));
 
 export default function Home() {
-  const count = 9;
-  const images = [...Array(count).keys()].map((x) => x + 1);
-
-  let m, n;
-  let first, second, third;
-
-  m = Math.ceil(count / 3);
-  n = Math.ceil((2 * count) / 3);
-
-  first = images.slice(0, m);
-  second = images.slice(m, n);
-  third = images.slice(n, count);
+  const first = images.filter(({ column }) => column === 1);
+  const second = images.filter(({ column }) => column === 2);
+  const third = images.filter(({ column }) => column === 3);
 
   return (
     <div>
       <Head>
         <title>Dezi Native Designs</title>
         <link rel="icon" href="/favicon.ico" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Native American Arts and Crafts" />
+        <meta name="keywords" content="Native, American, Arts, Crafts" />
+        <meta name="author" content="Desiree Schocko" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link
           rel="stylesheet"
           href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
         />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
           href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
           rel="stylesheet"
-        ></link>
+        />
         <link
           href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
           rel="stylesheet"
@@ -59,31 +61,34 @@ export default function Home() {
               <strong>MY WORK</strong>
             </h3>
 
-            <h5 className="sub-header">Native American Arts and Crafts</h5>
-            <p>Desiree Schocko / Jan. 2021</p>
+            <h4 className="sub-header">Native American Arts and Crafts</h4>
+            <h5>Desiree Schocko / Milwaukee, WI / Jan. 2021</h5>
 
             <div className="container-fluid">
               <a
+                title="Esty"
                 target="_blank"
                 href="https://www.etsy.com/shop/DeziNativeDesigns?ref=seller-platform-mcnav"
-                className="btn btn-default btn-xlg margin-sm"
+                className="btn btn-default btn-lg margin-sm"
               >
-                <i class="fa fa-etsy" aria-hidden="true" />
+                <i class="fa fa-etsy fa-lg" aria-hidden="true" />
               </a>
 
               <a
+                title="Instagram"
                 target="_blank"
                 href="https://www.instagram.com/desiodawa/"
-                className="btn btn-default btn-xlg margin-sm"
+                className="btn btn-default btn-lg margin-sm"
               >
-                <i class="fa fa-instagram" aria-hidden="true" />
+                <i class="fa fa-instagram fa-lg" aria-hidden="true" />
               </a>
 
               <a
+                title="Email"
                 href="mailto:Dschocko@hotmail.com"
-                className="btn btn-default btn-xlg margin-sm"
+                className="btn btn-default btn-lg margin-sm"
               >
-                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                <i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i>
               </a>
             </div>
           </div>
@@ -105,6 +110,7 @@ export default function Home() {
           </div>
         </div>
       </main>
+      <footer className="margin-top-lg"></footer>
     </div>
   );
 }

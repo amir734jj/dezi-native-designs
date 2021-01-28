@@ -1,0 +1,45 @@
+[
+  {
+    "src": "image1.jpg",
+    "column": 1
+  },
+  {
+    "src": "image6.jpg",
+    "text": "Black lip shell pendent necklace",
+    "column": 1
+  },
+
+  {
+    "src": "image3.jpg",
+    "column": 1
+  },
+
+  {
+    "src": "image4.jpg",
+    "text": "Baby Yoda",
+    "column": 2
+  },
+  {
+    "src": "image9.jpg",
+    "text": "Albalone heart tear drop earrings",
+    "column": 2
+  },
+  {
+    "src": "image5.jpg",
+    "column": 2
+  },
+  {
+    "src": "image7.jpg",
+    "text": "Hummingbird tear drop earrings",
+    "column": 3
+  },
+  {
+    "src": "image8.jpg",
+    "text": "Teal owl earrings with dentalium shells",
+    "column": 3
+  },
+  {
+    "src": "image2.jpg",
+    "column": 3
+  }
+]
